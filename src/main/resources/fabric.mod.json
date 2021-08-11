@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "item-frame-dupe",
+  "version": "${version}",
+  "name": "Item Frame Dupe",
+  "description": "An addon to assist with the item frame dupe.",
+  "authors": [
+    "Wide_Cat"
+  ],
+  "contact": {
+    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+  },
+  "icon": "assets/template/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "widecat.itemframedupe.addon.ItemFrameDupeAddon"
+    ]
+  },
+  "depends": {
+    "java": ">=16",
+    "minecraft": ">=1.17",
+    "meteor-client": ">0.4.3"
+  }
+}
