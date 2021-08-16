@@ -1,5 +1,7 @@
 # Item Frame Dupe Assistance Addon
 
+!The dupe has been removed for the forseeable future!
+
 An addon for meteor designed to help with the item frame dupe, designed primarily for openanarchy.org.
 This mod automatically places item frames on pistons, so you will no longer need to place them manually.
 
