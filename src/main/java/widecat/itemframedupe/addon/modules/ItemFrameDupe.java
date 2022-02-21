@@ -64,7 +64,7 @@ public class ItemFrameDupe extends Module {
     }
 
     private int timer;
-    private ArrayList<BlockPos> positions = new ArrayList<>();
+    private final ArrayList<BlockPos> positions = new ArrayList<>();
     private static final ArrayList<BlockPos> blocks = new ArrayList<>();
 
     @Override
@@ -160,6 +160,4 @@ public class ItemFrameDupe extends Module {
             case SOUTH -> orginalPos.south();
         };
     }
-
-
 }

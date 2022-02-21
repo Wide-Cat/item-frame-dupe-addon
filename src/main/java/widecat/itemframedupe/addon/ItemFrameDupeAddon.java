@@ -1,7 +1,7 @@
 package widecat.itemframedupe.addon;
 
-import meteordevelopment.meteorclient.MeteorAddon;
 import meteordevelopment.meteorclient.MeteorClient;
+import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,9 +14,8 @@ public class ItemFrameDupeAddon extends MeteorAddon {
 
 	@Override
 	public void onInitialize() {
-		LOG.info("Initializing Meteor Item Frame Dupe Addon.");
+		LOG.info("Initializing Item Frame Dupe Addon.");
 
-		// Required when using @EventHandler
 		MeteorClient.EVENT_BUS.registerLambdaFactory("widecat.itemframedupe.addon", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
         Modules.get().add(new ItemFrameDupe());

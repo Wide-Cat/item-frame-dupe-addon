@@ -18,8 +18,8 @@
     ]
   },
   "depends": {
-    "java": ">=16",
-    "minecraft": ">=1.17",
-    "meteor-client": ">0.4.3"
+    "java": ">=17",
+    "minecraft": ">=1.18",
+    "meteor-client": "*"
   }
 }
