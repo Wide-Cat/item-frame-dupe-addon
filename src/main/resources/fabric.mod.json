@@ -8,7 +8,7 @@
     "Wide_Cat"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/Wide-Cat/item-frame-dupe-addon"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
@@ -19,7 +19,7 @@
   },
   "depends": {
     "java": ">=17",
-    "minecraft": ">=1.18",
+    "minecraft": ">=1.19.2",
     "meteor-client": "*"
   }
 }

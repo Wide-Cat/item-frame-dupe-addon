@@ -20,4 +20,8 @@ public class ItemFrameDupeAddon extends MeteorAddon {
 
         Modules.get().add(new ItemFrameDupe());
 	}
+    @Override
+    public String getPackage() {
+        return "ItemFrameDupe";
+    }
 }
