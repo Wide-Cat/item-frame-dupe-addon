@@ -37,6 +37,13 @@ public class ItemFrameDupe extends Module {
         .build()
     );
 
+    private final Setting<Boolean> backOfPiston = sgGeneral.add(new BoolSetting.Builder()
+        .name("back-of-piston")
+        .description("Whether to place on the front or back of piston")
+        .defaultValue(true)
+        .build()
+    );
+
     private final Setting<Integer> delay = sgGeneral.add(new IntSetting.Builder()
         .name("delay")
         .description("The delay between placements.")
@@ -102,6 +109,9 @@ public class ItemFrameDupe extends Module {
             }
 
             Direction direction = mc.world.getBlockState(blockPos).get(FacingBlock.FACING);
+            if (backOfPiston.get()){
+                direction = direction.getOpposite();
+            }
             BlockPos placePos = getBlockPosFromDirection(direction, blockPos);
             BlockUtils.place(placePos, itemResult, rotate.get(), 50, true, true, swapBack.get());
 
@@ -114,6 +124,9 @@ public class ItemFrameDupe extends Module {
 
     private boolean shouldPlace(BlockPos pistonPos) {
         Direction direction = mc.world.getBlockState(pistonPos).get(FacingBlock.FACING);
+        if (backOfPiston.get()){
+            direction = direction.getOpposite();
+        }
         BlockPos iFramePos = getBlockPosFromDirection(direction, pistonPos);
 
         for (Entity entity : mc.world.getEntities()) {
